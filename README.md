@@ -1,8 +1,8 @@
 # OpenVRTrackingSample
 Simple OpenVR  device tracking example for C# WPF
 
-This is a very simple Openvr tracking example for .net developers. It simply show the value of device state. 
 
+This is a very simple Openvr tracking example for .net developers. It simply show the value of device state. 
 If you have Oculus runtime, It is also compatible with Oculus VR.
 
 
