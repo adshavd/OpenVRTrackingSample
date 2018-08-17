@@ -7,6 +7,7 @@ If you have Oculus runtime, It is also compatible with Oculus VR.
 
 
 Dependency : 
+
 openvr_api - Put openvr_api.dll which is right for your operating system into your bin forder.
 
 SteamVR runtime - Install Steam and SteamVR runtime.
