@@ -1,0 +1,111 @@
+﻿<Window x:Class="OpenVRTrackingSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OpenVRTrackingSample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="680"
+        Loaded="MainWindow_Loaded">
+    <Grid>
+        <Label Content="HMD" HorizontalAlignment="Left" Margin="20,50,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="90,50,0,0" TextWrapping="Wrap" Text="state" VerticalAlignment="Top" Width="110" IsReadOnly="True" Name="HmdState"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="210,50,0,0" TextWrapping="Wrap" Text="index" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="HmdIndex"/>
+        
+        <Label Content="Vector3" HorizontalAlignment="Left" Margin="20,80,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="90,80,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="HmdVectorX"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="150,80,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="HmdVectorY"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="210,80,0,0" TextWrapping="Wrap" Text="z" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="HmdVectorZ"/>
+        
+        <Label Content="Quaternion" HorizontalAlignment="Left" Margin="20,110,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="90,110,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="HmdQuaternionX"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="150,110,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="HmdQuaternionY"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="210,110,0,0" TextWrapping="Wrap" Text="z" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="HmdQuaternionZ"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="270,110,0,0" TextWrapping="Wrap" Text="w" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="HmdQuaternionW"/>
+        
+        <Label Content="ControllerR" HorizontalAlignment="Left" Margin="340,150,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="410,150,0,0" TextWrapping="Wrap" Text="state" VerticalAlignment="Top" Width="110" IsReadOnly="True" Name="CRState"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="530,150,0,0" TextWrapping="Wrap" Text="index" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CRIndex"/>
+
+        <Label Content="Vector3" HorizontalAlignment="Left" Margin="340,180,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="410,180,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CRVectorX"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="470,180,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CRVectorY"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="530,180,0,0" TextWrapping="Wrap" Text="z" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CRVectorZ"/>
+
+        <Label Content="Quaternion" HorizontalAlignment="Left" Margin="340,210,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="410,210,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CRQuaternionX"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="470,210,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CRQuaternionY"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="530,210,0,0" TextWrapping="Wrap" Text="z" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CRQuaternionZ"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="590,210,0,0" TextWrapping="Wrap" Text="w" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CRQuaternionW"/>
+
+        <Label Content="ulPressed" HorizontalAlignment="Left" Margin="340,240,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="410,240,0,0" TextWrapping="Wrap" Text="ulong" VerticalAlignment="Top" Width="110" IsReadOnly="True" Name="CRulPressed"/>
+        <Label Content="ulTouched" HorizontalAlignment="Left" Margin="340,270,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="410,270,0,0" TextWrapping="Wrap" Text="ulong" VerticalAlignment="Top" Width="110" IsReadOnly="True" Name="CRulTouched"/>
+        <Label Content="rAxis0" HorizontalAlignment="Left" Margin="340,300,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="410,300,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CRAxis0X"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="470,300,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CRAxis0Y"/>
+        <Label Content="rAxis1" HorizontalAlignment="Left" Margin="340,330,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="410,330,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CRAxis1X"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="470,330,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CRAxis1Y"/>
+        <Label Content="rAxis2" HorizontalAlignment="Left" Margin="340,360,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="410,360,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CRAxis2X"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="470,360,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CRAxis2Y"/>
+        <Label Content="rAxis3" HorizontalAlignment="Left" Margin="340,390,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="410,390,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CRAxis3X"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="470,390,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CRAxis3Y"/>
+        <Label Content="rAxis4" HorizontalAlignment="Left" Margin="340,420,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="410,420,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CRAxis4X"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="470,420,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CRAxis4Y"/>
+
+        <Label Content="ControllerL" HorizontalAlignment="Left" Margin="20,150,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="90,150,0,0" TextWrapping="Wrap" Text="state" VerticalAlignment="Top" Width="110" IsReadOnly="True" Name="CLState"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="210,150,0,0" TextWrapping="Wrap" Text="index" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CLIndex"/>
+
+        <Label Content="Vector3" HorizontalAlignment="Left" Margin="20,180,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="90,180,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CLVectorX"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="150,180,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CLVectorY"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="210,180,0,0" TextWrapping="Wrap" Text="z" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CLVectorZ"/>
+
+        <Label Content="Quaternion" HorizontalAlignment="Left" Margin="20,210,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="90,210,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CLQuaternionX"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="150,210,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CLQuaternionY"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="210,210,0,0" TextWrapping="Wrap" Text="z" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CLQuaternionZ"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="270,210,0,0" TextWrapping="Wrap" Text="w" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CLQuaternionW"/>
+
+        <Label Content="ulPressed" HorizontalAlignment="Left" Margin="20,240,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="90,240,0,0" TextWrapping="Wrap" Text="ulong" VerticalAlignment="Top" Width="110" IsReadOnly="True" Name="CLulPressed"/>
+        <Label Content="ulTouched" HorizontalAlignment="Left" Margin="20,270,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="90,270,0,0" TextWrapping="Wrap" Text="ulong" VerticalAlignment="Top" Width="110" IsReadOnly="True" Name="CLulTouched"/>
+        <Label Content="rAxis0" HorizontalAlignment="Left" Margin="20,300,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="90,300,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CLAxis0X"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="150,300,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CLAxis0Y"/>
+        <Label Content="rAxis1" HorizontalAlignment="Left" Margin="20,330,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="90,330,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CLAxis1X"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="150,330,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CLAxis1Y"/>
+        <Label Content="rAxis2" HorizontalAlignment="Left" Margin="20,360,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="90,360,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CLAxis2X"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="150,360,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CLAxis2Y"/>
+        <Label Content="rAxis3" HorizontalAlignment="Left" Margin="20,390,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="90,390,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CLAxis3X"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="150,390,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CLAxis3Y"/>
+        <Label Content="rAxis4" HorizontalAlignment="Left" Margin="20,420,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="90,420,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CLAxis4X"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="150,420,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="CLAxis4Y"/>
+        
+        <Label Content="Tracker" HorizontalAlignment="Left" Margin="20,460,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="90,460,0,0" TextWrapping="Wrap" Text="state" VerticalAlignment="Top" Width="110" IsReadOnly="True" Name="TrackerState"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="210,460,0,0" TextWrapping="Wrap" Text="index" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="TrackerIndex"/>
+
+        <Label Content="Vector3" HorizontalAlignment="Left" Margin="20,490,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="90,490,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="TrackerVectorX"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="150,490,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="TrackerVectorY"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="210,490,0,0" TextWrapping="Wrap" Text="z" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="TrackerVectorZ"/>
+
+        <Label Content="Quaternion" HorizontalAlignment="Left" Margin="20,520,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="90,520,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="TrackerQuaternionX"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="150,520,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="TrackerQuaternionY"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="210,520,0,0" TextWrapping="Wrap" Text="z" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="TrackerQuaternionZ"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="270,520,0,0" TextWrapping="Wrap" Text="w" VerticalAlignment="Top" Width="50" IsReadOnly="True" Name="TrackerQuaternionW"/>
+    </Grid>
+</Window>
